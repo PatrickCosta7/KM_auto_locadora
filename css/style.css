@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
 @font-face {
     font-family: "DM Serif Text Italic";
     src: url("/fonts/DM_Serif_Text/DMSerifText-Italic.ttf");
@@ -8,8 +10,47 @@
     src: url("/fonts/DM_Serif_Text/DMSerifText-Regular.ttf");
 }
 
-.share-tech-mono-regular {
-    font-family: "Share Tech Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-} 
+.navbar {
+    background-color: #0A2463 !important;
+}
+
+.navbar a {
+    font-family: "DM Serif Text Regular", serif;
+    color: #FFF !important;
+}
+.navbar :hover{
+    color: #FF7A00 !important;
+}
+
+.text-hero-section {
+    font-family: "DM Serif Text Regular", serif;
+    background-color: #F2F2F2 !important;
+}
+
+button {
+    background-color: #FF7A00 !important;
+    color: #FFF !important;
+    font-family: "DM Serif Text Regular", serif;
+}
+button:hover {
+    background-color: #0A2463 !important;
+    color: #FFF !important;
+}
+
+#float-whatsaap-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 36px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
