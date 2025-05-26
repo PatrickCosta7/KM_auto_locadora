@@ -13,7 +13,6 @@
 .navbar {
     background-color: #0A2463 !important;
 }
-
 .navbar a {
     font-family: "DM Serif Text Regular", serif;
     color: #FFF !important;
@@ -34,6 +33,12 @@ button {
 }
 button:hover {
     background-color: #0A2463 !important;
+    color: #FFF !important;
+}
+
+#about-us {
+    background-color: #3B5BA9 !important;
+    font-family: "DM Serif Text Regular", serif;
     color: #FFF !important;
 }
 
