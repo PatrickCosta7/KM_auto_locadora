@@ -13,17 +13,14 @@
 .navbar {
     background-color: #0A2463 !important;
 }
+
 .navbar a {
     font-family: "DM Serif Text Regular", serif;
     color: #FFF !important;
 }
-.navbar :hover{
-    color: #FF7A00 !important;
-}
 
-.text-hero-section {
-    font-family: "DM Serif Text Regular", serif;
-    background-color: #F2F2F2 !important;
+.navbar :hover {
+    color: #FF7A00 !important;
 }
 
 button {
@@ -31,12 +28,53 @@ button {
     color: #FFF !important;
     font-family: "DM Serif Text Regular", serif;
 }
+
 button:hover {
     background-color: #0A2463 !important;
     color: #FFF !important;
 }
 
-#about-us {
+.hero-section h1 {
+    font-family: "DM Serif Text Regular", serif;
+    color: #0A2463;
+    font-size: 3rem;
+}
+
+.hero-section {
+  min-height: 480px;
+  background: linear-gradient(
+      to right,
+      rgba(255,255,255,0.96) 0%,
+      rgba(255,255,255,0.80) 50%,
+      rgba(255,255,255,0.15) 85%,
+      rgba(255,255,255,0.05) 100%
+    ),
+    url('../imagens/banner_img.jpg') no-repeat right center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+}
+
+.btn-warning {
+  background-color: #FF7A00;
+  border: none;
+}
+.btn-warning:hover{
+    background-color: #0A2463;
+    color: #FFF;
+}
+
+.contato-form {
+    background-color: #F2F2F2 !important;
+    font-family: "DM Serif Text Regular", serif;
+    border-radius: 25px;
+}
+
+#how-it-works {
     background-color: #3B5BA9 !important;
     font-family: "DM Serif Text Regular", serif;
     color: #FFF !important;
