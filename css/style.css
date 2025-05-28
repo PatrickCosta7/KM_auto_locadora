@@ -2,8 +2,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 @font-face {
-    font-family: "DM Serif Text Italic";
-    src: url("/fonts/DM_Serif_Text/DMSerifText-Italic.ttf");
+    font-family: "Oxygen Regular";
+    src: url("/fonts/Oxygen/Oxygen/Oxygen-Regular.ttf");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 }
 
 .navbar a {
-    font-family: "DM Serif Text Regular", serif;
+    font-family: "Oxygen Regular", serif;
     color: #FFF !important;
 }
 
@@ -24,19 +24,19 @@
     color: #FF7A00 !important;
 }
 
-button {
+.page-button {
     background-color: #FF7A00 !important;
     color: #FFF !important;
-    font-family: "DM Serif Text Regular", serif;
+    font-family: "Oxygen Regular", serif;
 }
 
-button:hover {
+.page-button:hover {
     background-color: #0A2463 !important;
     color: #FFF !important;
 }
 
 .hero-section h1 {
-    font-family: "DM Serif Text Regular", serif;
+    font-family: "Oxygen Regular", serif;
     color: #0A2463;
     font-size: 2.2rem;
 }
@@ -58,25 +58,15 @@ button:hover {
     position: relative;
 }
 
-.btn-warning {
-    background-color: #FF7A00;
-    border: none;
-}
-
-.btn-warning:hover {
-    background-color: #0A2463;
-    color: #FFF;
-}
-
 .contato-form {
     background-color: #F2F2F2 !important;
-    font-family: "DM Serif Text Regular", serif;
+    font-family: "Oxygen Regular", serif;
     border-radius: 25px;
 }
 
 #how-it-works {
     background-color: #3B5BA9 !important;
-    font-family: "DM Serif Text Regular", serif;
+    font-family: "Oxygen Regular", serif;
     color: #FFF !important;
 }
 
@@ -113,7 +103,7 @@ button:hover {
         font-size: 1.3rem;
     }
 
-    .icon-font {
+    .icon-font-title {
         font-size: 1.1rem;
     }
 }
@@ -127,12 +117,12 @@ button:hover {
         font-size: 1.4rem;
     }
 
-    .icon-font {
+    .icon-font-title {
         font-size: 1.3rem;
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .hero-section h1 {
         font-size: 3.5rem;
     }
@@ -141,7 +131,12 @@ button:hover {
         font-size: 2rem;
     }
 
-    .icon-font {
-        font-size: 1.3rem;
+    .icon-font-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .icon-font-text {
+        font-size: 1rem;
     }
 }
