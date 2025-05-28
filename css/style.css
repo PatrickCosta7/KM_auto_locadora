@@ -37,33 +37,32 @@ button:hover {
 .hero-section h1 {
     font-family: "DM Serif Text Regular", serif;
     color: #0A2463;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 
 .hero-section {
-  min-height: 480px;
-  background: linear-gradient(
-      to right,
-      rgba(255,255,255,0.96) 0%,
-      rgba(255,255,255,0.80) 50%,
-      rgba(255,255,255,0.15) 85%,
-      rgba(255,255,255,0.05) 100%
-    ),
-    url('../imagens/banner_img.jpg') no-repeat right center/cover;
-  position: relative;
-  overflow: hidden;
+    min-height: 480px;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 255, 255, 0.80) 50%,
+            rgba(255, 255, 255, 0.15) 85%,
+            rgba(255, 255, 255, 0.05) 100%),
+        url('../imagens/banner_img.jpg') no-repeat right center/cover;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
-  z-index: 2;
-  position: relative;
+    z-index: 2;
+    position: relative;
 }
 
 .btn-warning {
-  background-color: #FF7A00;
-  border: none;
+    background-color: #FF7A00;
+    border: none;
 }
-.btn-warning:hover{
+
+.btn-warning:hover {
     background-color: #0A2463;
     color: #FFF;
 }
@@ -78,6 +77,11 @@ button:hover {
     background-color: #3B5BA9 !important;
     font-family: "DM Serif Text Regular", serif;
     color: #FFF !important;
+}
+
+.icon-beneficios {
+    font-size: 2rem;
+    color: #2C2C2C;
 }
 
 #float-whatsaap-button {
@@ -96,4 +100,47 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Breackpoints */
+@media (min-width: 300px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .icon-beneficios {
+        font-size: 1.3rem;
+    }
+
+    .icon-font {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .icon-beneficios {
+        font-size: 1.4rem;
+    }
+
+    .icon-font {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .icon-beneficios {
+        font-size: 2rem;
+    }
+
+    .icon-font {
+        font-size: 1.3rem;
+    }
 }
