@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.6",
-    "bootstrap-icons": "^1.13.1"
+    "bootstrap-icons": "^1.13.1",
+    "googleapis": "^149.0.0",
+    "resend": "^4.5.1"
   }
 }
