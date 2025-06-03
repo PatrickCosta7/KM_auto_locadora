@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { Resend } from 'resend';
 // import { google } from 'googleapis';
 
