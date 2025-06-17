@@ -1,4 +1,3 @@
-require('dotenv').config();
 import { Resend } from 'resend';
 // import { google } from 'googleapis';
 
@@ -23,6 +22,8 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: 'Email failed to send.' });
   }
+
+  res.status(200).json({ success: true });
 
   //   // 2. Append to Google Sheets
   //   try {
