@@ -8,11 +8,10 @@ export default async function handler(req, res) {
 
   const { name, phone, email, car } = req.body;
 
-  // 1. Send Email using Resend
   try {
     await resend.emails.send({
-      from: 'pl.costa@hotmail.com', // Or your verified sender address
-      to: 'costaetcorreia27@gmail.com',   // Change to your email
+      from: 'pl.costa@hotmail.com',
+      to: 'costaetcorreia27@gmail.com',
       subject: 'New Form Submission',
       html: `<p><strong>Nome:</strong> ${name}</p>
              <p><strong>Telefone:</strong> ${phone}</p>
