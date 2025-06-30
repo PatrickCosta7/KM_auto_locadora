@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-// import { google } from 'googleapis';
+import { google } from 'googleapis';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -22,26 +22,24 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Email failed to send.' });
   }
 
-  res.status(200).json({ success: true });
+    // 2. Append to Google Sheets
+    try {
+      const auth = new google.auth.GoogleAuth({
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
+        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+      });
+      const sheets = google.sheets({ version: 'v4', auth });
+      await sheets.spreadsheets.values.append({
+        spreadsheetId: process.env.GOOGLE_SHEET_ID,
+        range: 'Sheet1!A:E',
+        valueInputOption: 'USER_ENTERED',
+        requestBody: {
+          values: [[name, phone, email, car, new Date().toISOString()]],
+        },
+      });
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to add to Google Sheet.' });
+    }
 
-  //   // 2. Append to Google Sheets
-  //   try {
-  //     const auth = new google.auth.GoogleAuth({
-  //       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
-  //       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-  //     });
-  //     const sheets = google.sheets({ version: 'v4', auth });
-  //     await sheets.spreadsheets.values.append({
-  //       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  //       range: 'Sheet1!A:C',
-  //       valueInputOption: 'USER_ENTERED',
-  //       requestBody: {
-  //         values: [[name, email, message, new Date().toISOString()]],
-  //       },
-  //     });
-  //   } catch (error) {
-  //     return res.status(500).json({ error: 'Failed to add to Google Sheet.' });
-  //   }
-
-  //   res.status(200).json({ success: true });
+    res.status(200).json({ success: true });
 }
