@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     const sheets = google.sheets({ version: 'v4', auth });
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "'Teste KM'!A:E",
+      range: "'Teste KM'!A2:E",
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[name, phone, email, car, new Date().toISOString()]],
