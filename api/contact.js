@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'kmautolocadora@gmail.com',
-      subject: 'New Form Submission',
+      subject: 'Novos dados de investidor interesado - KM auto locadora',
       html: `<p><strong>Nome:</strong> ${name}</p>
              <p><strong>Telefone:</strong> ${phone}</p>
              <p><strong>Email:</strong> ${email}</p>
