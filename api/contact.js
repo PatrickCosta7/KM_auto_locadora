@@ -8,11 +8,12 @@ export default async function handler(req, res) {
 
   const { name, phone, email, car } = req.body;
 
+  // Resend API
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'kmautolocadora@gmail.com',
-      subject: 'Novos dados de investidor interesado - KM auto locadora',
+      subject: 'Novos dados de investidor interessado - KM auto locadora',
       html: `<p><strong>Nome:</strong> ${name}</p>
              <p><strong>Telefone:</strong> ${phone}</p>
              <p><strong>Email:</strong> ${email}</p>
@@ -23,7 +24,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Email failed to send.', details: error.message });
   }
 
-    // 2. Append to Google Sheets
+  // Google Sheets API
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
