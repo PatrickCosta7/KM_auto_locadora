@@ -65,6 +65,16 @@
     max-width: 500px;
 }
 
+#abile_link {
+    color: #3B5BA9 !important;
+    text-decoration: none;
+}
+
+#abile_link:hover {
+    color: #FF7A00 !important;
+    text-decoration: none;
+}
+
 #how-it-works {
     background-color: #3B5BA9 !important;
     font-family: "Oxygen Regular", serif;
