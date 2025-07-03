@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: "Oxygen Regular";
-    src: url("/fonts/Oxygen/Oxygen-Regular.ttf");
+    src: url("../fonts/Oxygen/Oxygen-Regular.ttf");
 }
 
 @font-face {
     font-family: "DM Serif Text Regular";
-    src: url("/fonts/DM_Serif_Text/DMSerifText-Regular.ttf");
+    src: url("../fonts/DM_Serif_Text/DMSerifText-Regular.ttf");
 }
 
 .navbar {
