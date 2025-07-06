@@ -31,12 +31,14 @@ export default async function handler(req, res) {
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
     const sheets = google.sheets({ version: 'v4', auth });
+    // Get current date/time in São Paulo timezone (America/Sao_Paulo)
+    const saoPauloTime = new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' }).replace(' ', 'T');
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: "A2:E",
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[name, phone, email, car, new Date().toISOString()]],
+      values: [[name, phone, email, car, saoPauloTime]],
       },
     });
   } catch (error) {
