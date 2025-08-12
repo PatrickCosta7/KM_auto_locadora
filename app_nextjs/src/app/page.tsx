@@ -1,9 +1,10 @@
+import { MainContent } from "./components/MainContent";
 
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-      <h1>Test</h1>
-    </div>
+    <main>
+      <MainContent />
+    </main>
   );
 }
