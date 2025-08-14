@@ -1,14 +1,12 @@
 import { Footer } from '../components/molecules/Footer';
-import { Header } from '../components/molecules/Header';
-import './globals.css';
-
+import { Navbar } from '../components/molecules/Navbar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body>
-        <Header />
-        {children}
+        <Navbar />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
