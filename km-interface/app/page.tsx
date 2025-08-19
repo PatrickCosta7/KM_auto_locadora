@@ -1,5 +1,10 @@
-export default function Home() {
+import { MainPageContent } from "../components/templates/MainPageContent";
+
+
+export default function HomePage() {
   return (
-    <div className="text-2xl font-bold text-center">Hello KM test</div>
-      );
+    <main>
+      <MainPageContent />
+    </main>
+  );
 }

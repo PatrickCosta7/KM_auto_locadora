@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Oxygen Regular";
+  src: url("/fonts/Oxygen/Oxygen-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DM Serif Text Regular";
+  src: url("/fonts/DM_Serif_Text/DMSerifText-Regular.ttf");
+}
+
+@layer base {
+  body {
+    font-family: 'Oxygen Regular', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-secondary text-white font-oxygen px-6 py-3 rounded-lg hover:bg-primary transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-primary text-white font-oxygen px-6 py-3 rounded-lg hover:bg-secondary transition-colors duration-300;
+  }
+}
+
+@theme {
+
+  --color-primary: #0A2463;
+  --color-secondary: #FF7A00;
+  --color-accent: #3B5BA9;
+  
+
+  colors: {
+    primary: '#0A2463',
+    secondary: '#FF7A00',
+    accent: '#3B5BA9',
+    dark: '#2C2C2C',
+    light: '#F2F2F2',
+    whatsapp: '#25d366',
+  }
+  fontFamily: {
+    'oxygen': ['Oxygen Regular', 'sans-serif'],
+      'dm-serif': ['DM Serif Text Regular', 'serif'],
+  }
+  spacing: {
+    '15': '3.75rem', // 60px for WhatsApp button
+  }
+}
