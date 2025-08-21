@@ -1,51 +1,58 @@
-@import "tailwindcss";
+
+/* Tailwind config translated to CSS custom properties */
+:root {
+	--color-primary: #0A2463;
+	--color-secondary: #FF7A00;
+	--color-accent: #3B5BA9;
+	--color-dark: #2C2C2C;
+	--color-light: #F2F2F2;
+	--color-whatsapp: #25d366;
+	--spacing-15: 3.75rem;
+	--font-oxygen: 'Oxygen Regular', sans-serif;
+	--font-dm-serif: 'DM Serif Text Regular', serif;
+}
+
+/* Example font-face declarations (ensure fonts are available or update URLs) */
+@font-face {
+	font-family: 'Oxygen Regular';
+	src: local('Oxygen Regular'), url('/fonts/Oxygen-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
 
 @font-face {
-  font-family: "Oxygen Regular";
-  src: url("/fonts/Oxygen/Oxygen-Regular.ttf");
+	font-family: 'DM Serif Text Regular';
+	src: local('DM Serif Text Regular'), url('/fonts/DMSerifText-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
-
-@font-face {
-  font-family: "DM Serif Text Regular";
-  src: url("/fonts/DM_Serif_Text/DMSerifText-Regular.ttf");
+.btn-primary {
+	background-color: var(--color-secondary);
+	color: #fff;
+	font-family: var(--font-oxygen);
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	border-radius: 0.5rem;
+	transition-property: background-color;
+	transition-duration: 300ms;
 }
-
-@layer base {
-  body {
-    font-family: 'Oxygen Regular', sans-serif;
-  }
+.btn-primary:hover {
+	background-color: var(--color-primary);
 }
-
-@layer components {
-  .btn-primary {
-    @apply bg-secondary text-white font-oxygen px-6 py-3 rounded-lg hover:bg-primary transition-colors duration-300;
-  }
-
-  .btn-secondary {
-    @apply bg-primary text-white font-oxygen px-6 py-3 rounded-lg hover:bg-secondary transition-colors duration-300;
-  }
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-oxygen);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    transition-property: background-color;
+    transition-duration: 300ms;
 }
-
-@theme {
-
-  --color-primary: #0A2463;
-  --color-secondary: #FF7A00;
-  --color-accent: #3B5BA9;
-  
-
-  colors: {
-    primary: '#0A2463',
-    secondary: '#FF7A00',
-    accent: '#3B5BA9',
-    dark: '#2C2C2C',
-    light: '#F2F2F2',
-    whatsapp: '#25d366',
-  }
-  fontFamily: {
-    'oxygen': ['Oxygen Regular', 'sans-serif'],
-      'dm-serif': ['DM Serif Text Regular', 'serif'],
-  }
-  spacing: {
-    '15': '3.75rem', // 60px for WhatsApp button
-  }
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
 }

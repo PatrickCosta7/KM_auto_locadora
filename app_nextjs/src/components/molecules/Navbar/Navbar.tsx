@@ -12,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-primary shadow-lg">
-      <div className="container mx-auto px-4 lg:px-8 xl:px-12">
+    <nav className="bg-[#1a237e] shadow-2xl fixed top-0 left-0 w-full z-50">
+      <div className="container mx-auto px-4 lg:px-4 xl:px-6">
         <div className="flex justify-between items-center py-4 lg:py-4 xl:py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -38,7 +38,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 lg:space-x-6 xl:space-x-8">
+          <div className="hidden md:flex space-x-4 lg:space-x-4 xl:space-x-6">
             <Link href="#how-it-works" className="text-white hover:text-secondary transition-colors font-oxygen text-lg lg:text-lg xl:text-xl">
               Como funciona?
             </Link>
@@ -55,22 +55,22 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-700">
             <div className="flex flex-col space-y-4">
-              <Link 
-                href="#how-it-works" 
+              <Link
+                href="#how-it-works"
                 className="text-white hover:text-secondary transition-colors font-oxygen text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Como funciona?
               </Link>
-              <Link 
-                href="#beneficios" 
+              <Link
+                href="#beneficios"
                 className="text-white hover:text-secondary transition-colors font-oxygen text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Benefícios
               </Link>
-              <Link 
-                href="#contato" 
+              <Link
+                href="#contato"
                 className="text-white hover:text-secondary transition-colors font-oxygen text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
