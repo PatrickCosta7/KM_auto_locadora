@@ -1,5 +1,5 @@
-import { Footer } from '../components/molecules/Footer';
-import { Navbar } from '../components/molecules/Navbar';
+import { Footer } from '../components/organisms/Footer';
+import { Navbar } from '../components/organisms/Navbar';
 import './globals.css';
 
 export const metadata = {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Banner() {
+export default function HeroSection() {
   return (
     <section className="relative min-h-[560px] flex items-center justify-start overflow-hidden">
       {/* Background Image */}
