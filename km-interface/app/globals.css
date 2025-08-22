@@ -1,6 +1,6 @@
 @import "tailwindcss";
 /* Tailwind config translated to CSS custom properties */
-:root {
+@theme {
 	--color-primary: #0A2463;
 	--color-secondary: #FF7A00;
 	--color-accent: #3B5BA9;

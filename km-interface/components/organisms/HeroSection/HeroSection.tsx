@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Button } from '../../atoms/Button';
 
 export default function HeroSection() {
   return (
@@ -23,12 +23,12 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 lg:mb-12 text-gray-700 font-oxygen leading-relaxed">
             Ganhe até 3% ao mês com investimento seguro, contrato garantido e total transparência.
           </p>
-          <Link 
+          <Button 
             href="#contato" 
             className="btn-primary text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-5 inline-block"
           >
             Quero ser investidor
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

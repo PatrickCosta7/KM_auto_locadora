@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { Button } from '@/components/atoms/Button';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -116,12 +117,12 @@ export default function ContactForm() {
                   />
                 </div>
                 
-                <button
+                <Button
                   type="submit"
                   className="w-full btn-primary text-lg lg:text-xl py-3 lg:py-4"
                 >
                   Quero ser um investidor KM
-                </button>
+                </Button>
               </form>
             </div>
           </div>
