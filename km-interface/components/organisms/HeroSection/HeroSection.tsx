@@ -25,7 +25,7 @@ export default function HeroSection() {
           </p>
           <Button 
             href="#contato" 
-            className="btn-primary text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-5 inline-block"
+            className="main-button text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-5 inline-block"
           >
             Quero ser investidor
           </Button>
