@@ -2,9 +2,19 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl bg-primary text-white flex items-center justify-between px-8 py-3 rounded-3xl shadow-lg"
+      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl bg-primary/98 text-white flex items-center justify-between px-8 py-3 rounded-3xl shadow-lg"
       style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
     >
       {/* Logo */}
@@ -44,7 +54,7 @@ export default function Navbar() {
       </button>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-primary rounded-3xl shadow-lg py-4 z-40">
+        <div className="absolute top-full left-0 w-full bg-primary/98 rounded-t-none rounded-b-3xl shadow-lg py-2 z-40 -mt-5">
           <div className="flex flex-col items-center gap-4">
             <Link href="#how-it-works" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Como funciona?</Link>
             <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Benefícios</Link>
