@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl bg-primary/98 text-white flex items-center justify-between px-8 py-3 rounded-3xl shadow-lg"
+      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl bg-primary text-white flex items-center justify-between px-8 py-4 rounded-3xl shadow-lg"
       style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
     >
       {/* Logo */}
@@ -42,26 +42,35 @@ export default function Navbar() {
         <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium">Benefícios</Link>
         <Link href="#contato" className="navbar-anim-link text-white text-base font-medium">Fale conosco</Link>
       </div>
-      {/* Mobile menu button */}
+      {/* Mobile menu button with animated hamburger */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-white ml-4"
+        className="md:hidden text-white ml-4 relative w-8 h-8 focus:outline-none"
         aria-label="Toggle navigation"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <span className="block absolute left-1/2 top-1/2 w-6 h-6 -translate-x-1/2 -translate-y-1/2">
+          <span
+            className={`absolute h-0.5 w-6 bg-white rounded transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 top-3' : 'top-1'}`}
+          ></span>
+          <span
+            className={`absolute h-0.5 w-6 bg-white rounded transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : 'top-3'}`}
+          ></span>
+          <span
+            className={`absolute h-0.5 w-6 bg-white rounded transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 top-3' : 'top-5'}`}
+          ></span>
+        </span>
       </button>
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-primary/98 rounded-t-none rounded-b-3xl shadow-lg py-2 z-40 -mt-5">
-          <div className="flex flex-col items-center gap-4">
-            <Link href="#how-it-works" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Como funciona?</Link>
-            <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Benefícios</Link>
-            <Link href="#contato" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Fale conosco</Link>
-          </div>
+      {/* Mobile Navigation with transition */}
+      <div
+        className={`absolute top-full left-0 w-full bg-primary rounded-t-none rounded-b-3xl shadow-lg z-40 py-2 -mt-6 transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-0 pointer-events-none'}`}
+        style={{ transformOrigin: 'top' }}
+      >
+        <div className="flex flex-col items-center gap-2">
+          <Link href="#how-it-works" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Como funciona?</Link>
+          <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Benefícios</Link>
+          <Link href="#contato" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Fale conosco</Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

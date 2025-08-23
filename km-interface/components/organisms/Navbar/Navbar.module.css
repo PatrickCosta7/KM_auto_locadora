@@ -1,0 +1,25 @@
+/* Animated underline for navbar links (Uiverse-inspired) */
+.navbar-anim-link {
+  position: relative;
+  color: var(--color-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navbar-anim-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.navbar-anim-link:hover::after {
+  transform: scaleX(1);
+}
+.navbar-anim-link:hover {
+  color: var(--color-secondary);
+}
