@@ -1,5 +1,6 @@
 'use client';
 
+import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -23,7 +24,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl bg-primary text-white flex items-center justify-between px-8 py-4 rounded-3xl shadow-lg"
+      className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-9xl bg-primary text-white flex items-center justify-between px-8 py-4 rounded-3xl shadow-lg"
       style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
     >
       {/* Logo */}
@@ -38,9 +39,9 @@ export default function Navbar() {
       </Link>
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center gap-8">
-        <Link href="#how-it-works" className="navbar-anim-link text-white text-base font-medium">Como funciona?</Link>
-        <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium">Benefícios</Link>
-        <Link href="#contato" className="navbar-anim-link text-white text-base font-medium">Fale conosco</Link>
+        <Link href="#how-it-works" className={`${styles['navbar-anim-link']} text-white text-base font-medium`}>Como funciona?</Link>
+        <Link href="#beneficios" className={`${styles['navbar-anim-link']} text-white text-base font-medium`}>Benefícios</Link>
+        <Link href="#contato" className={`${styles['navbar-anim-link']} text-white text-base font-medium`}>Fale conosco</Link>
       </div>
       {/* Mobile menu button with animated hamburger */}
       <button
@@ -66,9 +67,9 @@ export default function Navbar() {
         style={{ transformOrigin: 'top' }}
       >
         <div className="flex flex-col items-center gap-2">
-          <Link href="#how-it-works" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Como funciona?</Link>
-          <Link href="#beneficios" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Benefícios</Link>
-          <Link href="#contato" className="navbar-anim-link text-white text-base font-medium" onClick={() => setIsMenuOpen(false)}>Fale conosco</Link>
+          <Link href="#how-it-works" className={`${styles['navbar-anim-link']} text-white text-base font-medium`} onClick={() => setIsMenuOpen(false)}>Como funciona?</Link>
+          <Link href="#beneficios" className={`${styles['navbar-anim-link']} text-white text-base font-medium`} onClick={() => setIsMenuOpen(false)}>Benefícios</Link>
+          <Link href="#contato" className={`${styles['navbar-anim-link']} text-white text-base font-medium`} onClick={() => setIsMenuOpen(false)}>Fale conosco</Link>
         </div>
       </div>
     </nav>

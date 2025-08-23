@@ -1,3 +1,4 @@
+import styles from './Card.module.css';
 
 interface CardProps {
   icon: React.ReactNode;
@@ -7,11 +8,10 @@ interface CardProps {
 
 export default function Card({ icon, title, description }: CardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md px-4 py-10 flex flex-col items-center text-center">
-      <div className="mb-3 text-3xl">{icon}</div>
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      <p className="text-gray-700">{description}</p>
+    <div className={`${styles.card} bg-white rounded-lg shadow-xl px-4 py-11 flex flex-col items-center text-center`}>
+      <div className={`${styles.cardImage} mb-3 text-3xl`}>{icon}</div>
+      <h2 className={`${styles.cardTitle} text-xl text-primary font-bold my-2`}>{title}</h2>
+      <p className={`${styles.cardBody} text-gray-700`}>{description}</p>
     </div>
   );
 };
-

@@ -119,7 +119,7 @@ export default function ContactForm() {
                 
                 <Button
                   type="submit"
-                  className="w-full main-button text-lg lg:text-xl py-3 lg:py-4"
+                  className="w-full text-lg lg:text-xl py-3 lg:py-4"
                 >
                   Quero ser um investidor KM
                 </Button>
