@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/atoms/Button';
+import { Input } from '@/components/atoms/Input';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -50,76 +51,65 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Car Image - Hidden on mobile */}
           <div className="hidden lg:block">
-            <Image
+            {/* <Image
               src="/images/car.png"
               alt="Imagem de carro"
               width={500}
               height={400}
               className="w-full h-auto max-w-lg xl:max-w-xl"
-            />
+            /> */}
           </div>
-          
+
           {/* Contact Form */}
           <div className="lg:ml-8 xl:ml-12">
-            <div className="bg-light rounded-3xl p-8 lg:p-10 xl:p-12 shadow-lg max-w-lg mx-auto lg:mx-0">
-              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-primary mb-6 lg:mb-8 font-oxygen text-center">
+            <div className="bg-slate-200 rounded-3xl p-6 lg:p-8 xl:p-10 shadow-lg max-w-lg mx-auto lg:mx-0">
+              <h3 className="text-2xl lg:text-2xl xl:text-3xl font-semibold text-primary mb-6 lg:mb-8 font-oxygen text-center">
                 Quero ser um investidor KM
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-8">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Nome"
-                    required
-                    className="w-full px-4 lg:px-6 py-3 lg:py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent font-oxygen text-base lg:text-lg"
-                  />
-                </div>
-                
-                <div>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="Telefone"
-                    pattern="[0-9]*"
-                    inputMode="numeric"
-                    required
-                    className="w-full px-4 lg:px-6 py-3 lg:py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent font-oxygen text-base lg:text-lg"
-                  />
-                </div>
-                
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Email"
-                    required
-                    className="w-full px-4 lg:px-6 py-3 lg:py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent font-oxygen text-base lg:text-lg"
-                  />
-                </div>
-                
-                <div>
-                  <input
-                    type="text"
-                    name="car"
-                    value={formData.car}
-                    onChange={handleInputChange}
-                    placeholder="Modelo do veículo"
-                    required
-                    className="w-full px-4 lg:px-6 py-3 lg:py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent font-oxygen text-base lg:text-lg"
-                  />
-                </div>
-                
+
+                <Input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Nome"
+                  required
+                />
+
+                <Input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Telefone"
+                  pattern="[0-9]*"
+                  inputMode="numeric"
+                  required
+                />
+
+                <Input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Email"
+                  required
+                />
+
+                <Input
+                  type="text"
+                  name="car"
+                  value={formData.car}
+                  onChange={handleInputChange}
+                  placeholder="Modelo do veículo"
+                  required
+                />
+
                 <Button
                   type="submit"
-                  className="w-full text-lg lg:text-xl py-3 lg:py-4"
+                  className="w-full text-md lg:text-lg py-1 lg:py-4"
                 >
                   Quero ser um investidor KM
                 </Button>
