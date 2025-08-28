@@ -23,8 +23,8 @@ export default function HeroSection() {
         <div className="flex flex-col md:flex-row items-stretch">
           {/* Left content */}
           <div className="md:w-3/5 flex flex-col justify-center mb-12 md:mb-0 md:pr-12">
-            <div className="inline-block bg-indigo-700/50 backdrop-blur-sm rounded-full px-6 py-2 mb-8 border-2 border-indigo-400 shadow-lg">
-              <span className="text-base font-bold text-white tracking-wide">
+            <div className="bg-indigo-700/50 backdrop-blur-sm rounded-full w-56 py-2 mb-8 border-2 border-indigo-400 shadow-lg flex items-center justify-start">
+                <span className="font-oxygen font-bold text-white px-4 py-1">
                 Investimento Inteligente
               </span>
             </div>
@@ -46,7 +46,7 @@ export default function HeroSection() {
               </a>
             </div>
             {/* Features */}
-            <div className="flex flex-row gap-8 mt-8">
+            <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-12 mt-4">
               <div className="flex items-center">
                 <div className="bg-white/10 p-3 rounded-full mr-3">
                   <BarChart2 className="w-6 h-6 text-orange-400" />
