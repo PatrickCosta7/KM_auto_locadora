@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, StarHalf } from 'lucide-react';
+import { Star, StarHalf, ArrowRight } from 'lucide-react';
 export default function Reviews() {
     interface Review {
         name: string;
@@ -42,12 +42,13 @@ export default function Reviews() {
         }
         return stars;
     };
+
     return <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
             <div className="text-center mb-16">
                 <div className="flex items-center justify-center mb-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 inline-block">
-                        O que nossos investidores dizem
+                    <h2 className="text-3xl md:text-4xl font-oxygen font-bold text-indigo-900 inline-block">
+                        E o que nossos investidores dizem?
                     </h2>
                 </div>
                 <div className="flex items-center justify-center">
@@ -79,9 +80,7 @@ export default function Reviews() {
             <div className="mt-10 text-center">
                 <a href="#" className="inline-flex items-center text-indigo-700 font-bold hover:text-indigo-800 transition-colors">
                     Ver todas as avaliações no Google
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
+                    <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
             </div>
         </div>

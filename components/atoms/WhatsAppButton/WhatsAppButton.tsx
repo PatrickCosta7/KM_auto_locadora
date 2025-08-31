@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/5511979520877?text=Tenho%20interesse%20em%20alugar%20meu%20carro%20com%20a%20KM"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-10 right-10 w-auto h-auto flex items-center justify-center z-[9999]"
+      className="fixed bottom-20 right-10 w-auto h-auto flex items-center justify-center z-[9999]"
       aria-label="Contatar via WhatsApp"
     >
       <button className={styles.Btn}>
