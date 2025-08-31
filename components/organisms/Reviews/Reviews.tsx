@@ -27,7 +27,6 @@ export default function Reviews() {
     return (
         <section className="py-20 bg-slate-50">
             <div className="container mx-auto px-4">
-                {/* ...existing header and rating code... */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {reviews.map((review, index) => (
                         <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
@@ -48,7 +47,6 @@ export default function Reviews() {
                         </div>
                     ))}
                 </div>
-                {/* ...existing footer code... */}
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ export default function MainPageContent() {
       <HeroSection />
       <HowItWorks />
       <Benefits />
-      <Reviews />
+      {/* <Reviews /> */}
       <ContactForm />
       <WhatsAppButton />
     </>
